@@ -1,0 +1,21 @@
+
+class Main {
+    public static int[] minMax(int n , int arr[]){
+        if( n == 1){
+            return new int [] {arr[0],arr[0]};
+        }                                                           
+        
+        int[] res = minMax(n - 1, arr);
+        
+        int  min = Math.min(res[0],arr[n-1]);
+        int  max = Math.max(res[1],arr[n-1]);
+        
+        return new int [] {min,max};
+        
+    }
+    public static void main(String[] args) {
+        int arr [] = {1,2,3,4,5,6};
+int[] ans = minMax(arr.length, arr);
+        System.out.println("[" + ans[0] + ", " + ans[1] + "]");
+    }
+}
