@@ -1,0 +1,15 @@
+import java.util.*;
+
+class Main {
+    public static int strlen(String s){
+        if(s.equals("")){
+            return 0;
+        }
+        return strlen(s.substring(1)) + 1;
+    }
+
+    public static void main(String[] args) {
+        String s  = "Swapnil";
+        System.out.println(strlen(s));
+    }
+}
