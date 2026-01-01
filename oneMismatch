@@ -1,0 +1,27 @@
+
+class Main {
+    public static void oneMismatch(String arr[] ){
+     
+        String s = "banna";
+        for(String word :arr){
+            if(s.length() != word.length()){
+                continue;
+            }
+            
+            int count = 0;
+            for(int i=0;i<s.length();i++){
+                if(s.charAt(i) == word.charAt(i)){
+                    count++;
+                }
+            }
+            
+            if(count == s.length() - 1){
+                System.out.println(word);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        String arr[] = {"banana", "banna", "bananv", "canan", "banaa"};
+        oneMismatch(arr);
+    }
+}
